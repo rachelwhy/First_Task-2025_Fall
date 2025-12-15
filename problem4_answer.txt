@@ -1,0 +1,17 @@
+# 问题4答案
+
+## (a) BPE训练结果
+- 训练文件: TinyStoriesV2-GPT4-valid.txt (21.5MB)
+- 目标vocab_size: 5000
+- 实际vocab_size: 5000
+- 训练时间: 23.69 秒
+- 峰值内存使用: 85.85 MB
+- 最长token长度: 14 字节
+- 最长token示例: ' uncomfortable'
+
+## (b) 性能分析
+根据profiler输出，最耗时的部分通常是:
+1. 主循环中的合并操作 (while current_vocab_size < vocab_size and pair_counts:)
+2. 查找最佳pair的循环 (for pair, cnt in pair_counts.items():)
+3. 更新pair_counts和pair_to_word_indices字典
+4. 文本预处理 (_pretokenize_chunk 函数)
