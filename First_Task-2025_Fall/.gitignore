@@ -1,0 +1,41 @@
+﻿# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Testing
+__snapshots__/
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Backup folder (exclude)
+First_Task-2025_Fall/
+
+# Data files (optional)
+# data/*.pkl
+# data/*.h5
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
